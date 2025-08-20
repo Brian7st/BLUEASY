@@ -1,0 +1,42 @@
+ * {
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+ }
+
+ :root{
+    --color-azul:#4bcaff;
+    --color-gris: #353f47;
+    --color-blanco:#ffffff;
+ }
+
+ .contenedor1{
+    background-image: url(../assets/Fondo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+ }
+ header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 5rem;
+    background-color: rgb(67,78,85,0.87);
+    color: white;
+}
+.e {
+    color: var(--color-azul);
+}
+.enlaces{
+    display: flex;
+    gap: 3rem;
+}
+.enlaces a {
+    text-decoration: none;
+    color: var(--color-blanco);
+}
+.enlaces a:hover {
+    color: var(--color-azul);
+    border: var(--color-azul) 1px solid;
+    padding: 0.5rem 0.5rem;
+}
