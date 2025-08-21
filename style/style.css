@@ -14,29 +14,151 @@
     background-image: url(../assets/Fondo.png);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 80vh;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    gap: 15rem;
  }
  header{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 5rem;
+    height: 10rem;
     background-color: rgb(67,78,85,0.87);
     color: white;
+}
+.blueasy h2 {
+    font-size: 2rem;
 }
 .e {
     color: var(--color-azul);
 }
 .enlaces{
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
 }
+
 .enlaces a {
     text-decoration: none;
     color: var(--color-blanco);
+    font-size: 1.2rem;
 }
 .enlaces a:hover {
     color: var(--color-azul);
     border: var(--color-azul) 1px solid;
     padding: 0.5rem 0.5rem;
+}
+.texto{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-blanco);
+}
+.fondoTexto{
+    font-size: 2.5rem;
+    background-color: rgb(67,78,85,0.87);
+    padding: 0.7rem;
+}
+.textofondo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.contenedor2{
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-azul);
+    padding: 11rem 19rem 2rem 19rem ;
+}
+.contenedorGrid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 13rem);
+    gap: 2rem;
+}
+.caja{
+    display: flex;
+    flex-direction: column;
+    color: var(--color-blanco);
+    gap: 0.6rem;
+}
+.contenedor3 {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    flex-direction: column;
+    padding: 7rem 20rem;
+}
+.PORTFOLIO{
+    display: flex;
+    justify-content: space-between;
+    width: 93%;
+}
+.tituloPortfolio{
+    font-size: 1.3rem;
+}
+.linea{
+    text-decoration: underline;
+}
+
+#colorNegro a{
+    color: #000;
+}
+#colorNegro a:hover{
+    color: var(--color-azul);
+}
+.cajaImagenes{
+    display: grid;
+    grid-template-columns: repeat(4,17rem);
+    grid-template-rows: repeat(2,17rem);
+    gap: 2rem;
+}
+.contenedor4{
+    display: flex;
+    gap: 5rem;
+    background-color: var(--color-gris);
+    justify-content: center;
+    padding: 5rem 20rem;
+    color: var(--color-blanco);
+}
+.cajaTexto{
+    display: flex;
+    flex-direction: column;
+    gap: 1.9rem;
+    padding: 0rem 3rem;
+}
+.cajaTexto h2 {
+    font-size: 1.8rem;
+}
+.cajaTexto p {
+    font-size: 1.1rem;
+}
+.cajaTexto a {
+    text-decoration: none;
+    color: #000;
+    border: #000 1px solid;
+    padding: 1rem 2rem;
+}
+.contenedor5{
+    background-color: var(--color-azul);
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 23rem;
+    color: var(--color-blanco);
+    gap: 4rem;
+}
+.twitter{
+    display: flex;
+    justify-content: space-between;
+    width: 104%;
+}
+.textoTwitter p {
+    font-size: 1.8rem;
+}
+.enlace{
+    text-decoration: none;
+    color: var(--color-blanco);
+
 }
