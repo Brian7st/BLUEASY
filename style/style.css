@@ -1,16 +1,26 @@
- * {
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
     margin: 0;
     padding: 0;
-     box-sizing: border-box;
- }
+    box-sizing: border-box;
+}
 
- :root{
-    --color-azul:#4bcaff;
+h2,
+h4,
+p,
+a {
+    font-family: "Noto Sans", sans-serif;
+}
+
+:root {
+    --color-azul: #4bcaff;
     --color-gris: #353f47;
-    --color-blanco:#ffffff;
- }
+    --color-blanco: #ffffff;
+    --color-gris-letras-footer: #515f67;
+}
 
- .contenedor1{
+.contenedor1 {
     background-image: url(../assets/Fondo.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -18,259 +28,419 @@
     display: flex;
     flex-direction: column;
     gap: 15rem;
- }
- header{
+    padding: 0 0 10rem 0;
+}
+
+header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 10rem;
-    background-color: rgb(67,78,85,0.87);
+    height: clamp(6rem, 10vh, 10rem);
+    background-color: rgba(67, 78, 85, 0.87);
     color: white;
 }
+
 .blueasy h2 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
 }
+
 .e {
     color: var(--color-azul);
 }
-.enlaces{
+
+.enlaces {
     display: flex;
-    gap: 2rem;
+    gap: clamp(1rem, 2vw, 2rem);
 }
 
 .enlaces a {
     text-decoration: none;
     color: var(--color-blanco);
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    padding: 0.5rem;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
 }
+
 .enlaces a:hover {
     color: var(--color-azul);
     border: var(--color-azul) 1px solid;
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem;
 }
-.texto{
+
+.texto {
     display: flex;
     justify-content: center;
     text-align: center;
     color: var(--color-blanco);
 }
-.fondoTexto{
-    font-size: 2.5rem;
-    background-color: rgb(67,78,85,0.87);
-    padding: 0.7rem;
+
+.fondoTexto {
+    font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+    background-color: rgba(67, 78, 85, 0.87);
+    padding: clamp(0.5rem, 0.7vw, 0.7rem);
 }
+
 .textofondo {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: clamp(0.3rem, 0.5vw, 0.5rem);
     align-items: center;
 }
 
-.contenedor2{
+.contenedor2 {
     display: flex;
     justify-content: center;
     background-color: var(--color-azul);
-    padding: 11rem 19rem 2rem 19rem ;
+    padding: 11rem 19rem 2rem 19rem;
 }
-.contenedorGrid{
+
+.contenedorGrid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(1, 13rem);
+    grid-template-columns: repeat(4, 21rem);
+    grid-template-rows: repeat(1, 14rem);
     gap: 2rem;
 }
-.caja{
+
+.caja {
     display: flex;
     flex-direction: column;
     color: var(--color-blanco);
     gap: 0.6rem;
 }
+
 .contenedor3 {
     display: flex;
     justify-content: center;
-    gap: 5rem;
+    gap: clamp(3rem, 5vw, 5rem);
     flex-direction: column;
-    padding: 7rem 20rem;
+    padding: clamp(5rem, 7vh, 7rem) clamp(10rem, 20vw, 20rem);
 }
-.PORTFOLIO{
+
+.PORTFOLIO {
     display: flex;
     justify-content: space-between;
     width: 93%;
 }
-.tituloPortfolio{
-    font-size: 1.3rem;
+
+.tituloPortfolio {
+    font-size: clamp(1rem, 1.3vw, 1.3rem);
 }
-.linea{
+
+.linea {
     text-decoration: underline;
 }
 
-#colorNegro a{
+#colorNegro a {
     color: #000;
 }
-#colorNegro a:hover{
+
+#colorNegro a:hover {
     color: var(--color-azul);
 }
-.cajaImagenes{
+
+.cajaImagenes {
     display: grid;
-    grid-template-columns: repeat(4,17rem);
-    grid-template-rows: repeat(2,17rem);
-    gap: 2rem;
+    grid-template-columns: repeat(4, clamp(12rem, 17vw, 17rem));
+    grid-template-rows: repeat(2, clamp(12rem, 17vw, 17rem));
+    gap: clamp(1rem, 2vw, 2rem);
 }
-.contenedor4{
+
+.cajaImagenes .imagenes {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.cajaImagenes .imagenes img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.contenedor4 {
     display: flex;
-    gap: 5rem;
+    gap: clamp(3rem, 5vw, 5rem);
     background-color: var(--color-gris);
     justify-content: center;
-    padding: 5rem 20rem;
+    padding: clamp(3rem, 5vw, 5rem) clamp(10rem, 20vw, 20rem);
     color: var(--color-blanco);
 }
-.cajaTexto{
+
+.cajaTexto {
     display: flex;
     flex-direction: column;
-    gap: 1.9rem;
-    padding: 0rem 3rem;
+    gap: clamp(1rem, 1.9vw, 1.9rem);
+    padding: 0 clamp(1rem, 3vw, 3rem);
 }
+
 .cajaTexto h2 {
-    font-size: 1.8rem;
+    font-size: clamp(1.2rem, 1.8vw, 1.8rem);
 }
+
 .cajaTexto p {
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
 }
+
 .cajaTexto a {
     text-decoration: none;
     color: #000;
-    border: #000 1px solid;
-    padding: 1rem 2rem;
+    border: 1px solid #000;
+    padding: clamp(0.8rem, 1rem, 1rem) clamp(1.5rem, 2vw, 2rem);
+    background-color: transparent;
+    box-shadow: 0 4px 0 #000;
+    position: relative;
+    top: 0;
+    transition: all 0.2s ease;
+    display: inline-block;
 }
-.contenedor5{
+
+.cajaTexto a:hover {
+    top: 2px;
+    box-shadow: 0 2px 0 #000;
+}
+
+.cajaTexto a:active {
+    top: 4px;
+    box-shadow: 0 0 0 #000;
+}
+
+.contenedor5 {
     display: flex;
     flex-direction: column;
-    padding: 5rem 23rem;
+    padding: clamp(3rem, 5vw, 5rem) clamp(10rem, 23vw, 23rem);
     color: var(--color-blanco);
-    gap: 3rem;
+    gap: clamp(2rem, 3vw, 3rem);
 }
-.colorAzul{
+
+.colorAzul {
     background-color: var(--color-azul);
 }
-.colorBlanco{
+
+.colorBlanco {
     background-color: var(--color-blanco);
     color: #000;
 }
-.twitter{
+
+.twitter {
     display: flex;
     justify-content: space-between;
     width: 104%;
 }
+
 .textoTwitter p {
-    font-size: 1.8rem;
-    line-height: 3rem
+    font-size: clamp(1.2rem, 1.8vw, 1.8rem);
+    line-height: clamp(2rem, 3vw, 3rem);
 }
-.enlace{
+
+.enlace {
     text-decoration: none;
     color: var(--color-blanco);
 }
+
 .contenedor6 {
     background-image: url(../assets/bg_whoIs.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height:32rem;
-    padding: 6rem 23rem;
+    height: 32rem;
+    padding: clamp(3rem, 6vw, 6rem) clamp(10rem, 23vw, 23rem);
     color: var(--color-blanco);
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-
+    gap: clamp(2rem, 3vw, 3rem);
 }
-.whoIsJohnDoe{
+
+.whoIsJohnDoe,
+.whoIsJohnDoe2 {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: clamp(1rem, 2vw, 2rem);
     width: auto;
 }
-.whoIsJohnDoe2{
+
+.cajaEnvolvente {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-.cajaEnvolvente{
-    display: flex;
-    gap: 2rem;
-    line-height: 1.5rem
+    gap: clamp(1rem, 2vw, 2rem);
+    line-height: 1.5rem;
 }
 
-.cajaImagenes2{
+.cajaImagenes2 {
     display: grid;
-    grid-template-columns: repeat(4,4rem);
-    grid-template-rows: repeat(1,10rem);
-    gap: 2rem;
+    grid-template-columns: repeat(4, 4rem);
+    grid-template-rows: repeat(1, 10rem);
+    gap: clamp(1rem, 2vw, 2rem);
 }
-.imagenComillas{
+
+.imagenComillas {
     height: auto;
     width: 4rem;
 }
-.WalterWhite{
+
+.WalterWhite {
     margin-top: 2rem;
 }
-.WalterWhite a{
+
+.WalterWhite a {
     text-decoration: none;
     color: var(--color-azul);
 }
-.contenedor7{
+
+.contenedor7 {
     background-image: url(../assets/bg_contact.png);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: clamp(3rem, 5vw, 5rem) clamp(8rem, 15vw, 15rem);
 }
-.cajaPrincipal{
+
+.cajaPrincipal {
     display: grid;
-    grid-template-columns: repeat(4,8rem);
-    grid-template-rows: repeat(6,4rem);
+    grid-template-columns: 15rem 10rem 7rem 40rem;
+    grid-row-gap: 1rem;
+    grid-template-rows: 2rem 6rem 6rem 13rem 5rem;
     color: var(--color-blanco);
 }
-.cajaPrincipal h4{
-    font-size: 0.8em;
+
+.cajaPrincipal h4 {
+    font-size: clamp(0.7rem, 0.8vw, 0.8rem);
 }
-.caja1{
+
+.caja1 {
     grid-column: 1;
     grid-row: 1;
-    display: flex;
 }
-.inputText input {
+
+.inputText input,
+.inputGrande input {
     background-color: transparent;
     border: var(--color-blanco) 1px solid;
     width: 100%;
-    height: 2rem;
 }
-.caja2{
-    grid-column: 1/3;
-    grid-row: 2;
+
+.inputText input {
+    height: 3rem;
+}
+
+.inputGrande input {
+    height: 12.5rem;
+}
+
+.caja2,
+.caja3,
+.caja4 {
     display: flex;
     flex-direction: column;
+    gap: 0.3rem;
 }
-.caja3{
+
+.caja2,
+.caja3 {
     grid-column: 1/3;
+}
+
+.caja2 {
+    grid-row: 2;
+}
+
+.caja3 {
     grid-row: 3;
 }
-.caja4{
+
+.caja4 {
     grid-column: 1/5;
     grid-row: 4;
 }
-.inputGrande input{
-    background-color: transparent;
-    border: var(--color-blanco) 1px solid;
-    width: 100%;
-}
-.caja5{
+
+.caja5 {
     grid-column: 1;
     grid-row: 5;
+    display: flex;
+    align-items: center;
 }
-.caja6{
+
+.caja5 a {
+    text-decoration: none;
+    font-size: clamp(0.7rem, 0.8vw, 0.8rem);
+    color: var(--color-blanco);
+    background-color: var(--color-azul);
+    padding: clamp(0.6rem, 0.8vw, 0.8rem) clamp(4rem, 5.6vw, 5.6rem);
+    position: relative;
+    top: 0;
+    transition: all 0.2s ease;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.caja5 a:hover {
+    top: 2px;
+}
+
+.caja6 {
     grid-column: 4/5;
     grid-row: 2;
+    display: flex;
+    align-items: center;
 }
-.caja7{
+
+.caja6 p {
+    line-height: clamp(1.2rem, 1.4vw, 1.4rem);
+}
+
+.caja7 {
     grid-column: 4/5;
     grid-row: 3;
+    display: flex;
+}
+
+.caja7 ul li {
+    list-style: none;
+    margin-top: 2px;
+}
+
+footer {
+    background-color: var(--color-gris);
+    padding: clamp(2rem, 4vw, 4rem) clamp(10rem, 23vw, 23.1rem);
+    display: flex;
+    justify-content: space-between;
+}
+
+.enlacesFooter {
+    display: flex;
+    gap: clamp(1rem, 2vw, 2rem);
+}
+
+.enlacesFooter a {
+    text-decoration: none;
+    color: var(--color-gris-letras-footer);
+    padding-right: 1rem;
+}
+
+.enlaceFooter {
+    border-right: var(--color-gris-letras-footer) 2px solid;
+}
+
+.enlacesFooter2 a {
+    text-decoration: none;
+    color: var(--color-gris-letras-footer);
+}
+
+@media (max-width:1279px) {
+    .caja h2 {
+        font-size: 1.3rem;
+    }
+
+    .caja p {
+        font-size: 0.8rem;
+    }
+
+    .contenedor3 {
+        padding: 2rem;
+    }
+
+
 }
