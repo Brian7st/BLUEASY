@@ -90,7 +90,6 @@ header {
 
 .contenedor2 {
     display: flex;
-    justify-content: center;
     background-color: var(--color-azul);
     padding: 11rem 19rem 2rem 19rem;
 }
@@ -165,7 +164,7 @@ header {
     gap: clamp(3rem, 5vw, 5rem);
     background-color: var(--color-gris);
     justify-content: center;
-    padding: clamp(3rem, 5vw, 5rem) clamp(10rem, 20vw, 20rem);
+    padding: 4rem 17rem;
     color: var(--color-blanco);
 }
 
@@ -173,7 +172,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: clamp(1rem, 1.9vw, 1.9rem);
-    padding: 0 clamp(1rem, 3vw, 3rem);
+    padding: 0 3rem;
 }
 
 .cajaTexto h2 {
@@ -231,7 +230,7 @@ header {
 }
 
 .textoTwitter p {
-    font-size: clamp(1.2rem, 1.8vw, 1.8rem);
+    font-size: clamp(1.1rem, 1.8vw, 1.8rem);
     line-height: clamp(2rem, 3vw, 3rem);
 }
 
@@ -430,6 +429,10 @@ footer {
 }
 
 @media (max-width:1279px) {
+    .contenedor1{
+        height: 70vh;
+        gap: 10rem;
+    }
     .caja h2 {
         font-size: 1.3rem;
     }
@@ -437,10 +440,37 @@ footer {
     .caja p {
         font-size: 0.8rem;
     }
+    .contenedor2{
+        padding: 5rem 2rem 2rem 2rem;
+    }
 
     .contenedor3 {
         padding: 2rem;
     }
+    .contenedorGrid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    }
+    .contenedorGrid .caja{
+        width: 100%;
+        aspect-ratio: 1;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+    .contenedor4{
+        padding: 2rem 1rem;
+        gap: 1rem;
+    }
 
+    .imgVimeoVideo img {
+        height: auto;
+        width: 25rem;
+    }
+    .contenedor5 {
+        padding: 3rem 4rem;
+    }
+    .contenedor6{
+        padding: 8rem 3rem;
+    }
 
 }
