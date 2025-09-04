@@ -834,19 +834,18 @@ footer {
 
 @media screen and (min-width: 1400px) {
     .contenedor2 {
-        padding: 11rem 25rem 2rem 25rem;
+        padding: 11rem 0rem 2rem 3rem;
     }
-    
     .contenedor3,
     .contenedor5,
     .contenedor6 {
-        padding-left: 25rem;
-        padding-right: 25rem;
+        padding-left: 12rem;
+        padding-right: 15rem;
     }
     
     .contenedor4 {
-        padding-left: 22rem;
-        padding-right: 22rem;
+        padding-left: 9rem;
+        padding-right: 12.3rem;
     }
     
     footer {
